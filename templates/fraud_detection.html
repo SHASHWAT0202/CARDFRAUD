@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block title %}Fraud Detection{% endblock %}
+{% block content %}
+<h1>Fraud Detection</h1>
+<form method="POST">
+    <label for="features">Enter all 30 features, separated by commas:</label>
+    <input type="text" id="features" name="features" required placeholder="e.g., 0.1, 0.2, 0.3, ..., 1.0">
+    <button type="submit">Predict</button>
+</form>
+{% if prediction %}
+    <p>Prediction: {{ prediction }}</p>
+{% endif %}
+{% endblock %}
