@@ -13,9 +13,7 @@ except FileNotFoundError:
     model = None
     scaler = None
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+
 
 @app.route('/')
 def home():
